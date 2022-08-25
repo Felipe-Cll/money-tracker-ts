@@ -1,6 +1,7 @@
 import * as C from './styles';
 import { formatCurrentMonth } from '../../helpers/dateFilter';
 import { ResumeItem } from '../ResumeItem';
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 type Props = {
     currentMonth: string;
@@ -28,9 +29,9 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props
     return (
         <C.Container>
             <C.MonthArea>
-                <C.MonthArrow onClick={handlePrevMonth} >⬅</C.MonthArrow>
+                <C.MonthArrow><FaArrowAltCircleLeft size={30} color="#000" cursor="pointer" onClick={handleNextMonth} /></C.MonthArrow>
                 <C.MonthTitle>{formatCurrentMonth(currentMonth)}</C.MonthTitle>
-                <C.MonthArrow onClick={handleNextMonth} >➡</C.MonthArrow>
+                <C.MonthArrow><FaArrowAltCircleRight size={30} color="#000" cursor="pointer" onClick={handleNextMonth} /></C.MonthArrow>
             </C.MonthArea>
             <C.ResumeArea>
                 <ResumeItem title="Receitas" value={income} />
