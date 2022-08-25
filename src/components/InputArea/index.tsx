@@ -71,7 +71,7 @@ export const InputArea = ({ onAdd }: Props) => {
             </C.InputLabel>
             <C.InputLabel>
                 <C.InputTitle>Título</C.InputTitle>
-                <C.Input type="text" value={titleField} onChange={e => setTitleField(e.target.value)} />
+                <C.Input type="text" placeholder='Ex: Mensalidade' value={titleField} onChange={e => setTitleField(e.target.value)} />
             </C.InputLabel>
             <C.InputLabel>
                 <C.InputTitle>Valor</C.InputTitle>

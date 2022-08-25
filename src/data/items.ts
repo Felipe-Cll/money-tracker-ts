@@ -1,8 +1,10 @@
 import { Item } from '../types/Item';
 
 export const items: Item[] = [
-    { date: new Date(2022, 7, 5), category: 'food', title: 'McDonalds', value: 32.12 },
-    { date: new Date(2022, 7, 7), category: 'food', title: 'Burger King', value: 28 },
-    { date: new Date(2022, 7, 16), category: 'rent', title: 'Alguel Apt', value: 2300 },
-    { date: new Date(2022, 10, 18), category: 'salary', title: 'Salário GYM', value: 4500 },
+    { date: new Date(2022, 7, 5), category: 'salary', title: 'Salário X', value: 4.597 },
+    { date: new Date(2022, 7, 5), category: 'food', title: 'Coffee', value: 35.70 },
+    { date: new Date(2022, 7, 7), category: 'pay', title: 'Conta de energia', value: 135 },
+    { date: new Date(2022, 7, 15), category: 'extra', title: 'Royalties', value: 2230 },
+    { date: new Date(2022, 7, 29), category: 'rent', title: 'Alguel do apartamento', value: 2800 },
+    { date: new Date(2022, 7, 30), category: 'vehicle', title: 'Manutenção do carro', value: 850 }
 ];

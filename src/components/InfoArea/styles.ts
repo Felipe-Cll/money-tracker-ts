@@ -21,6 +21,12 @@ export const MonthArrow = styled.div`
     text-align: center;
     font-size: 25px;
     cursor: pointer;
+    color: #00bdae;
+    transition: 0.3s ease;
+
+    &:hover {
+        color: #00a396;
+    }
 `;
 
 export const MonthTitle = styled.div`

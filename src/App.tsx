@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import * as C from './App.styles';
+import { useState, useEffect } from 'react';
 import { Item } from './types/Item';
 import { categories } from './data/categories';
 import { items } from './data/items';
@@ -51,22 +51,17 @@ const App = () => {
         <C.HeaderText>Sistema Financeiro</C.HeaderText>
       </C.Header>
       <C.Body>
-        
         <InfoArea 
           currentMonth={currentMonth} 
           onMonthChange={handleMonthChange}
           income={income}
           expense={expense}
-
         />
-
         <InputArea onAdd={handleAddItem} />
-
         <TableArea list={filteredList} />
-
       </C.Body>
     </C.Container>
   );
-}
+};
 
 export default App;
