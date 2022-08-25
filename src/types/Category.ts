@@ -5,4 +5,4 @@ export type Category = {
         color: string;
         expense: boolean;
     }
-}
+};

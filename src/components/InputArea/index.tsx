@@ -1,12 +1,12 @@
+import * as C from './styles';
 import { useState } from 'react';
 import { Item } from '../../types/Item';
-import * as C from './styles';
 import { categories } from '../../data/categories';
 import { newDateAdjusted } from '../../helpers/dateFilter';
 
 type Props = {
     onAdd: (item: Item) => void;
-}
+};
 
 export const InputArea = ({ onAdd }: Props) => {
     const [dateField, setDateField] = useState('');
@@ -43,14 +43,14 @@ export const InputArea = ({ onAdd }: Props) => {
             });
             clearFields();
         }
-    }
+    };
     
     const clearFields = () => {
         setDateField('');
         setCategoryField('');
         setTitleField('');
         setValueField(0);
-    }
+    };
     
     return (
         <C.Container>
@@ -83,4 +83,4 @@ export const InputArea = ({ onAdd }: Props) => {
             </C.InputLabel>
         </C.Container>
     );
-}
+};

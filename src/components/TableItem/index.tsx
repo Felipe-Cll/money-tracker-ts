@@ -5,7 +5,7 @@ import { categories } from '../../data/categories';
 
 type Props = {
     item: Item
-}
+};
 
 export const TableItem = ({ item }: Props) => {
     return (
@@ -24,4 +24,4 @@ export const TableItem = ({ item }: Props) => {
             </C.TableColumn>
         </C.Tableline>
     );
-}
+};

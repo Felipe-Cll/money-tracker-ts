@@ -1,6 +1,6 @@
 import * as C from './styles';
-import { formatCurrentMonth } from '../../helpers/dateFilter';
 import { ResumeItem } from '../ResumeItem';
+import { formatCurrentMonth } from '../../helpers/dateFilter';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
     onMonthChange: (newMonth: string) => void;
     income: number;
     expense: number;
-}
+};
 
 export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props) => {
     
@@ -17,19 +17,19 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props
         let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1);
         currentDate.setMonth( currentDate.getMonth() - 1 );
         onMonthChange(`${currentDate.getFullYear()}-${currentDate.getMonth() + 1}`);
-    }
+    };
 
     const handleNextMonth = () => {
         let [year, month] = currentMonth.split('-');
         let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1);
         currentDate.setMonth( currentDate.getMonth() + 1 );
         onMonthChange(`${currentDate.getFullYear()}-${currentDate.getMonth() + 1}`);
-    }
+    };
 
     return (
         <C.Container>
             <C.MonthArea>
-                <C.MonthArrow><FaArrowAltCircleLeft size={30} color="#000" cursor="pointer" onClick={handleNextMonth} /></C.MonthArrow>
+                <C.MonthArrow><FaArrowAltCircleLeft size={30} color="#000" cursor="pointer" onClick={handlePrevMonth} /></C.MonthArrow>
                 <C.MonthTitle>{formatCurrentMonth(currentMonth)}</C.MonthTitle>
                 <C.MonthArrow><FaArrowAltCircleRight size={30} color="#000" cursor="pointer" onClick={handleNextMonth} /></C.MonthArrow>
             </C.MonthArea>
@@ -44,4 +44,4 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props
             </C.ResumeArea>
         </C.Container>
     );
-}
+};

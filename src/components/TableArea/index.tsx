@@ -4,7 +4,7 @@ import { TableItem } from '../TableItem';
 
 type Props = {
     list: Item[]
-}
+};
 
 export const TableArea = ({ list }: Props) => {
     return (
@@ -24,4 +24,4 @@ export const TableArea = ({ list }: Props) => {
             </tbody>
         </C.Table>
     );
-}
+};
