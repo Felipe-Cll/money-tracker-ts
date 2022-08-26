@@ -19,4 +19,20 @@ export const Body = styled.div`
     margin: auto;
     max-width: 980px;
     margin-bottom: 50px;
+
+    @media (max-width: 1000px) {
+        width: 850px;   
+    }
+    @media (max-width: 880px) {
+        width: 650px;   
+    }
+    @media (max-width: 690px) {
+        width: 500px;   
+    }
+    @media (max-width: 540px) {
+        width: 400px;   
+    }
+    @media (max-width: 420px) {
+        width: 310px;   
+    }
 `;

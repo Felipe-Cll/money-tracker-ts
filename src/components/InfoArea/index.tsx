@@ -29,9 +29,9 @@ export const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props
     return (
         <C.Container>
             <C.MonthArea>
-                <C.MonthArrow><FaArrowAltCircleLeft size={30}  cursor="pointer" onClick={handlePrevMonth} /></C.MonthArrow>
+                <C.MonthArrow><FaArrowAltCircleLeft onClick={handlePrevMonth} /></C.MonthArrow>
                 <C.MonthTitle>{formatCurrentMonth(currentMonth)}</C.MonthTitle>
-                <C.MonthArrow><FaArrowAltCircleRight size={30}  cursor="pointer" onClick={handleNextMonth} /></C.MonthArrow>
+                <C.MonthArrow><FaArrowAltCircleRight onClick={handleNextMonth} /></C.MonthArrow>
             </C.MonthArea>
             <C.ResumeArea>
                 <ResumeItem title="Receitas" value={income} />

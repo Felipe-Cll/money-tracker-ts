@@ -8,16 +8,31 @@ export const Container = styled.div`
     margin-top: 20px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 690px) {
+        padding: 20px;
+    }
+    @media (max-width: 540px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 export const InputLabel = styled.label`
     flex: 1;
     margin: 10px;
+
+    @media (max-width: 540px) {
+        width: 250px;
+    }
 `;
 
 export const InputTitle = styled.div`
     font-weight: bold;
     margin-bottom: 5 px;
+
+    
 `;
 
 export const Input = styled.input`
@@ -32,6 +47,10 @@ export const Input = styled.input`
     &:hover {
         border: 1px solid #00bdae;
     }
+
+    @media (max-width: 690px) {
+        padding: 5px;
+    }
 `;
 
 export const Select = styled.select`
@@ -45,6 +64,13 @@ export const Select = styled.select`
 
     &:hover {
         border: 1px solid #00bdae;
+    }
+
+    @media (max-width: 690px) {
+        padding: 17.5px;
+    }
+    @media (max-width: 540px) {
+        width: 150px;
     }
 `;
 
@@ -62,5 +88,9 @@ export const Button = styled.button`
     &:hover {
         background-color: #00a396;
         color: #fff;
+    }
+
+    @media (max-width: 690px) {
+        height: 40px;
     }
 `;
